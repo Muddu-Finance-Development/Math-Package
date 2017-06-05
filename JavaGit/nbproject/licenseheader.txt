@@ -1,0 +1,8 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}Project developed for Financial Engineering Math package
+${licensePrefix}Reference: Java methods for Financial engineering @Philip/ Barker
+<#if licenseLast??>
+${licenseLast}
+</#if>

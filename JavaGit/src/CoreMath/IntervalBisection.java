@@ -47,11 +47,12 @@ public abstract class IntervalBisection
                 precvalue=midvalue;
                 midvalue=lower+0.5*(higher-lower);
                 fc=computeFunction(midvalue);
-                if(fa*fb<0)
+                if(fa*fc<0)
                 {
                     higher=midvalue;
                 }
-                else if(fa*fb>0)
+                else 
+                    if(fa*fc>0)
                 {
                     lower=midvalue;
                 }
