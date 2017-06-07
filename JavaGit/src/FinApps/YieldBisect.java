@@ -34,7 +34,7 @@ public double computeFunction(double rootinput)
 {
     double poscashflow,solution;
     poscashflow=rateperTerm;
-    solution=(poscashflow/rootinput*(1.0-1.0/(Math.pow(1.0+rootinput,rateindex))))+(nominalstockprice/(Math.pow(1.0+rootinput, rateindex)))-marketpricevalue;
+    solution=(poscashflow/rootinput*(1.0-1.0/(Math.pow(1.0+rootinput,rateindex))))+(nominalstockprice/(Math.pow(1.0+rootinput,rateindex)))-marketpricevalue;
 return solution; 
 }
 public double yieLd(double noms,double term,double coupon,double mktp, double period)
