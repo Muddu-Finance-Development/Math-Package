@@ -18,7 +18,7 @@ public abstract class Derivative
        double value,x2,x1;
        x2=deriveFunction(InputFunc-h);
        x1=deriveFunction(InputFunc+h);
-       value=(x1-x2)/2*h;
+       value=((x1-x2)/2*h);
        return value;
    }
 }

@@ -8,6 +8,7 @@ import FinApps.Intermstructure;
 import FinApps.Spots;
 import FinApps.Volatility;
 import java.io.*;
+import java.lang.*;
 /**
  *
  * @author Muddu
@@ -35,8 +36,21 @@ public class Exercise_2_5
         dat_13=i.lagraninterp(dat13,vals);
         try
         {
-            PrintWriter w=new PrintWriter(new FileWriter("\users\data_for_13_5B.txt"),true);
-            PrintWriter pw=new PrintWriter(new FileWriter(c:\\data_for_02_5B.txt"),true);
+            File output = new File("/Users/Muddu/Documents/javaoutput.txt");
+            File dir = output.getParentFile();
+            if (!dir.isDirectory() && !dir.mkdirs())
+            {
+                // handle could not create directory
+                throw new SomeException("Could not create target directory '" + dir + "'");
+            }
+            File output2 = new File("/Users/Muddu/Documents/data_for_02_5B.txt");
+            File dir2 = output.getParentFile();
+            if (!dir2.isDirectory() && !dir2.mkdirs())
+            {
+                // handle could not create directory
+                throw new SomeException("Could not create target directory '" + dir + "'");
+            }
+            PrintWriter w=new PrintWriter(output2);
             System.out.println("Daily 02/08 Daily 13/08 ");
             System.out.println("MATURITY SPOT MATURITY SPOT");
             for(int j=0;j<dat_02.length;j++)

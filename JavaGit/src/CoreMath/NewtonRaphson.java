@@ -26,7 +26,7 @@ public double newtraph(double lowerbound)
     double fx=newtonroot(lowerbound);
     double Fx=derivation(lowerbound);
     double x=(lowerbound-(fx/Fx));
-    while(Math.abs(Math.abs(x)-Math.abs(lowerbound))< precisionvalue || counter > iterate)
+    while(Math.abs(Math.abs(x)-Math.abs(lowerbound))> precisionvalue || counter>iterate)
         {
         	
             lowerbound=x;

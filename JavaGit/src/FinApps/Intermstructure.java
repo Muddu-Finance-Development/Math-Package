@@ -62,4 +62,9 @@ public class Intermstructure extends Interms
         }
         return 1;
     }
+
+    @Override
+    public void intermstimes() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

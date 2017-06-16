@@ -7,6 +7,7 @@ package Examples;
 import FinApps.Intermstructure;
 import FinApps.Spots;
 import FinApps.Volatility;
+import CoreMath.Interpolate;
 /**
  *
  * @author Muddu
@@ -19,19 +20,20 @@ public class Exercise_2_4
     public static void main(String[] args)
     {
         Intermstructure i=new Intermstructure();
+        Interpolate test=new Interpolate();
         Spots s=new Spots();
         Volatility vol=new Volatility(100.0,2.0);
         double[][] xydat={{0.5,1.03},{1.0,1.28},{2.0,1.83},{3.0,2.36}};
         int j=0;
         double mat=0.5;
-        double firstpoint=i.lagrange(xydat,1.5);
-        double secondpoint=i.lagrange(xydat,2.5);
+        double firstpoint=test.lagrange(xydat,1.5);
+        double secondpoint=test.lagrange(xydat,2.5);
         double[] yields={1.03,1.28,firstpoint,1.83,secondpoint,2.36};
         double[] coupons={0.0,0.0,(firstpoint-0.4),1.53,(secondpoint-0.3),2.0};
         double[][]pcdata= new double[6][2];
         for(double yld:yields)
         {
-            pcdata[j][0]=vol.Bpricing(yld,mat,coupons[j]);
+            pcdata[j][0]=vol.bondPrice(yld,mat,coupons[j]);
             pcdata[j][1]=coupons[j];
             mat+=0.5;
             j++;
