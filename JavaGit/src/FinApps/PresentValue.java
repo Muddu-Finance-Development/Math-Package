@@ -16,7 +16,7 @@ public class PresentValue {
     public PresentValue() {
     }
 
-    public double pV(double[] discounts, double[] cashflows) {
+    public static double pV(double[] discounts, double[] cashflows) {
         double presval = 0;
         for (int i = 0; i < cashflows.length; i++)//returns sum of discounted values
         {
@@ -25,7 +25,7 @@ public class PresentValue {
         return presval;
     }
 
-    public double pV(double r, double[] cashflows)//implements PV for given IR
+    public static double pV(double r, double[] cashflows)//implements PV for given IR
     {
         int indx = 1;
         double sum = 0;
@@ -36,7 +36,7 @@ public class PresentValue {
         return sum;
     }
 
-    public double pV(double r, double cash, int period) {
+    public static double pV(double r, double cash, int period) {
         double sum = 0;
         int indx = 1;
         for (int i = 0; i < period; i++) {
