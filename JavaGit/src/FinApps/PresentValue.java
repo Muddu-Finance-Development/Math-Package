@@ -55,4 +55,11 @@ public class PresentValue {
         }
         return pv;
     }
+
+    public static double pVcont(double reporate, double d, double deliveryprice) {
+        return (deliveryprice / Math.exp(reporate * d));
+    }
+    public static double pVcont(double reporate, double d) {
+         return (1/ Math.exp(reporate * d));
+    }
 }
