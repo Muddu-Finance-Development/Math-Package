@@ -11,9 +11,9 @@ import java.text.NumberFormat;
  *
  * @author Muddu
  */
-public class Example_6_2 {
+public class Example_6_1 {
 
-    public Example_6_2() {
+    public Example_6_1() {
     }
 
     public static void main(String[] args) {
@@ -21,13 +21,13 @@ public class Example_6_2 {
         formatter.setMaximumFractionDigits(2);
         formatter.setMinimumFractionDigits(2);
         OptionLimits ops = new OptionLimits();
-        double[] stockprice = {38.0, 39.0, 40.0, 45.0, 38.0};
-        double[] strikeprice = {40.5, 41.5, 42.5, 47.5, 41.0};
+        double[] stockprice = {51.0, 50.0, 52.3, 53.6, 51.0};
+        double[] strikeprice = {50.0, 49.5, 51.5, 52.5, 50.5};
         double time = 0.5;
-        double interest = 0.11;
+        double interest = 0.13;
         double[] premiums = ops.lowerlimitCall(stockprice, interest, time, strikeprice);
         for (double pr : premiums) {
-            System.out.println("Put option premium per sahre ==" + formatter.format(pr));
+            System.out.println("Call option premium per sahre ==" + formatter.format(Math.max(pr, 0)));
         }
     }
 
