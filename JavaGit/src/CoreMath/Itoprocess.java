@@ -40,6 +40,14 @@ public class Itoprocess {
     public double getMean() {
         return meanvalue;
     }
+    /**
+	*
+	* @param mu mean value
+	* @param sigma The variance
+	* @param timedelta time periods for each step
+	* @param basevalue the starting value
+	* @return The change in the base value
+	*/
 
     public double itoValue(double mu, double sigma, double timedelta, double basevalue) {
         setSd(basevalue * (sigma * Math.sqrt(timedelta)));
