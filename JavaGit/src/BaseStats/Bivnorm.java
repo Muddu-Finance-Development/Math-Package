@@ -9,6 +9,7 @@ package BaseStats;
  * @author Muddu
  */
 public enum Bivnorm {
+
     bivar_params {
         public double evalArgs(double a, double b, double p) {
             double paramval = (a * b * p);
@@ -101,5 +102,4 @@ public enum Bivnorm {
     public double evalArgs(double a, double b, double p) {
         throw new UnsupportedOperationException("Not yet implemented");
     }
-
 }
